@@ -75,11 +75,12 @@ export const profileService = {
 
   isAdmin: async (userId: string) => {
     const { data, error } = await supabase
-      .from('profiles')
-      .select('is_admin')
+      .from('user_roles')
+      .select('role')
       .eq('user_id', userId)
-      .single();
-    return { isAdmin: data?.is_admin || false, error };
+      .eq('role', 'admin')
+      .maybeSingle();
+    return { isAdmin: !!data, error };
   }
 };
 
