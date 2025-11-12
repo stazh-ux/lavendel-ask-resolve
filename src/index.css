@@ -8,42 +8,47 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Lavender and black color scheme */
-    --background: 265 100% 97%;
-    --foreground: 0 0% 0%;
+    /* Vibrant purple-pink gradient theme */
+    --background: 265 100% 98%;
+    --foreground: 260 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card-foreground: 260 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover-foreground: 260 15% 15%;
 
-    --primary: 265 60% 65%;
+    --primary: 260 70% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 265 40% 90%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 265 60% 92%;
+    --secondary-foreground: 260 15% 15%;
 
-    --muted: 265 30% 95%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 265 40% 95%;
+    --muted-foreground: 260 10% 45%;
 
-    --accent: 265 80% 70%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 320 70% 65%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 265 30% 85%;
-    --input: 265 30% 85%;
-    --ring: 265 60% 65%;
+    --border: 265 30% 88%;
+    --input: 265 30% 88%;
+    --ring: 260 70% 60%;
 
     --radius: 0.75rem;
 
-    /* Custom design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(265 60% 65%), hsl(280 70% 75%));
-    --gradient-subtle: linear-gradient(180deg, hsl(265 100% 97%), hsl(265 50% 95%));
-    --shadow-elegant: 0 10px 30px -10px hsl(265 60% 65% / 0.3);
-    --shadow-soft: 0 4px 12px -2px hsl(265 30% 70% / 0.2);
+    /* Custom design tokens - vibrant purple-pink gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(260 70% 60%), hsl(320 70% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(260 75% 65%), hsl(320 75% 70%), hsl(340 80% 70%));
+    --gradient-subtle: linear-gradient(180deg, hsl(265 100% 98%), hsl(265 60% 96%));
+    --gradient-card: linear-gradient(135deg, hsl(260 60% 97%), hsl(320 40% 97%));
+    
+    --shadow-elegant: 0 10px 30px -10px hsl(260 70% 60% / 0.3);
+    --shadow-glow: 0 0 40px hsl(320 70% 65% / 0.2);
+    --shadow-soft: 0 4px 12px -2px hsl(260 40% 70% / 0.15);
+    
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     /* Rating stars golden yellow */

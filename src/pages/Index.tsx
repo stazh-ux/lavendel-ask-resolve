@@ -28,21 +28,24 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-subtle">
-      <header className="container mx-auto px-4 py-6">
+      <header className="container mx-auto px-4 py-8">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4">
             <img 
               src={brototypeLogo} 
               alt="Brototype" 
-              className="h-16 w-16 object-cover rounded-xl shadow-2xl hover:shadow-[0_20px_50px_rgba(265,60%,65%,0.3)] transition-all duration-300 hover:scale-105"
+              className="h-14 w-14 object-cover rounded-xl shadow-elegant hover:shadow-glow transition-all hover:scale-105"
             />
-            <h1 className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              Brototype
-            </h1>
+            <div>
+              <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+                Brototype
+              </h1>
+              <p className="text-xs text-muted-foreground">Student Support Portal</p>
+            </div>
           </div>
           <Button
             onClick={() => navigate("/auth")}
-            className="bg-gradient-primary hover:opacity-90 rounded-xl"
+            className="bg-gradient-primary hover:shadow-glow rounded-xl transition-all"
           >
             Get Started
             <ArrowRight className="ml-2 h-4 w-4" />
@@ -50,52 +53,52 @@ const Index = () => {
         </div>
       </header>
 
-      <main className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-5xl font-bold mb-6 leading-tight">
+      <main className="container mx-auto px-4 py-20">
+        <div className="max-w-4xl mx-auto text-center mb-20 space-y-8">
+          <h2 className="text-6xl font-bold mb-6 leading-tight bg-gradient-hero bg-clip-text text-transparent">
             Student Support Platform
           </h2>
-          <p className="text-xl text-muted-foreground mb-8">
+          <p className="text-2xl text-muted-foreground mb-10 leading-relaxed">
             Submit your problems, get expert responses, and learn from the community.
             Your questions help everyone grow.
           </p>
           <Button
             size="lg"
             onClick={() => navigate("/auth")}
-            className="bg-gradient-primary hover:opacity-90 rounded-xl text-lg px-8 py-6 hover-lift"
+            className="bg-gradient-primary hover:shadow-glow rounded-2xl text-lg px-12 py-7 shadow-elegant transition-all hover:scale-105"
           >
             Join Now
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <div className="bg-card p-8 rounded-2xl shadow-soft hover-lift">
-            <div className="bg-gradient-primary w-12 h-12 rounded-xl flex items-center justify-center mb-4">
-              <MessageCircle className="h-6 w-6 text-white" />
+        <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+          <div className="bg-gradient-card p-10 rounded-3xl shadow-glow hover-lift border-2 border-border/50 transition-all">
+            <div className="bg-gradient-primary w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-elegant">
+              <MessageCircle className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-xl font-bold mb-3">Submit Problems</h3>
-            <p className="text-muted-foreground">
+            <h3 className="text-2xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">Submit Problems</h3>
+            <p className="text-muted-foreground text-lg leading-relaxed">
               Share your challenges and questions with our support team. Include attachments for better clarity.
             </p>
           </div>
 
-          <div className="bg-card p-8 rounded-2xl shadow-soft hover-lift">
-            <div className="bg-gradient-primary w-12 h-12 rounded-xl flex items-center justify-center mb-4">
-              <Shield className="h-6 w-6 text-white" />
+          <div className="bg-gradient-card p-10 rounded-3xl shadow-glow hover-lift border-2 border-border/50 transition-all">
+            <div className="bg-gradient-primary w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-elegant">
+              <Shield className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-xl font-bold mb-3">Expert Responses</h3>
-            <p className="text-muted-foreground">
+            <h3 className="text-2xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">Expert Responses</h3>
+            <p className="text-muted-foreground text-lg leading-relaxed">
               Get detailed responses from our admin team. All answers are public to help the entire community.
             </p>
           </div>
 
-          <div className="bg-card p-8 rounded-2xl shadow-soft hover-lift">
-            <div className="bg-gradient-primary w-12 h-12 rounded-xl flex items-center justify-center mb-4">
-              <Users className="h-6 w-6 text-white" />
+          <div className="bg-gradient-card p-10 rounded-3xl shadow-glow hover-lift border-2 border-border/50 transition-all">
+            <div className="bg-gradient-primary w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-elegant">
+              <Users className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-xl font-bold mb-3">Learn Together</h3>
-            <p className="text-muted-foreground">
+            <h3 className="text-2xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">Learn Together</h3>
+            <p className="text-muted-foreground text-lg leading-relaxed">
               Browse all problems and solutions. Learn from others' questions and contribute to the knowledge base.
             </p>
           </div>
