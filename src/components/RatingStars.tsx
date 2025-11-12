@@ -39,7 +39,7 @@ export const RatingStars = ({
               sizeClasses[size],
               "transition-colors",
               star <= rating
-                ? "fill-[#F5E6D3] text-[#F5E6D3]"
+                ? "fill-[hsl(var(--rating-star))] text-[hsl(var(--rating-star))]"
                 : "fill-none text-muted-foreground"
             )}
           />

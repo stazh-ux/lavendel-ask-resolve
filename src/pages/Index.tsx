@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { authService } from "@/lib/supabase";
 import { ArrowRight, MessageCircle, Shield, Users } from "lucide-react";
+import brototypeLogo from "@/assets/brototype-logo.png";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -29,9 +30,16 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-subtle">
       <header className="container mx-auto px-4 py-6">
         <div className="flex items-center justify-between">
-          <h1 className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-            Brototype
-          </h1>
+          <div className="flex items-center gap-3">
+            <img 
+              src={brototypeLogo} 
+              alt="Brototype" 
+              className="h-16 w-16 object-cover rounded-xl shadow-2xl hover:shadow-[0_20px_50px_rgba(265,60%,65%,0.3)] transition-all duration-300 hover:scale-105"
+            />
+            <h1 className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              Brototype
+            </h1>
+          </div>
           <Button
             onClick={() => navigate("/auth")}
             className="bg-gradient-primary hover:opacity-90 rounded-xl"
