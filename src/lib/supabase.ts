@@ -151,3 +151,64 @@ export const problemService = {
     return { publicUrl, error: null };
   }
 };
+
+export const ratingService = {
+  submitRating: async (rating: number, comment: string, userId: string) => {
+    const { data, error } = await supabase
+      .from('ratings')
+      .upsert({
+        user_id: userId,
+        rating,
+        comment,
+      })
+      .select()
+      .single();
+    return { data, error };
+  },
+
+  getUserRating: async (userId: string) => {
+    const { data, error } = await supabase
+      .from('ratings')
+      .select('*')
+      .eq('user_id', userId)
+      .maybeSingle();
+    return { data, error };
+  },
+
+  getAllRatings: async () => {
+    const { data, error } = await supabase
+      .from('ratings')
+      .select('*')
+      .order('created_at', { ascending: false });
+    return { data, error };
+  }
+};
+
+export const notificationService = {
+  getUnreadNotifications: async (userId: string) => {
+    const { data, error } = await supabase
+      .from('notifications')
+      .select('*')
+      .eq('user_id', userId)
+      .eq('is_read', false)
+      .order('created_at', { ascending: false });
+    return { data, error };
+  },
+
+  markAsRead: async (notificationId: string) => {
+    const { error } = await supabase
+      .from('notifications')
+      .update({ is_read: true })
+      .eq('id', notificationId);
+    return { error };
+  },
+
+  markAllAsRead: async (userId: string) => {
+    const { error } = await supabase
+      .from('notifications')
+      .update({ is_read: true })
+      .eq('user_id', userId)
+      .eq('is_read', false);
+    return { error };
+  }
+};
