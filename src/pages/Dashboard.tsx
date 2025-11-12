@@ -11,6 +11,7 @@ import { RatingAnalytics } from "@/components/RatingAnalytics";
 import { NotificationBell } from "@/components/NotificationBell";
 import { LogOut } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import brototypeLogo from "@/assets/brototype-logo.png";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -85,9 +86,16 @@ const Dashboard = () => {
       <header className="bg-card border-b shadow-soft">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              Brototype
-            </h1>
+            <div className="flex items-center gap-3">
+              <img 
+                src={brototypeLogo} 
+                alt="Brototype" 
+                className="h-12 w-12 object-cover rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+              />
+              <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+                Brototype
+              </h1>
+            </div>
             <div className="flex items-center gap-2">
               {!isAdmin && <NotificationBell userId={user.id} />}
               <Button
@@ -128,16 +136,18 @@ const Dashboard = () => {
                 Submit Problem
               </button>
             )}
-            <button
-              onClick={() => setActiveTab("ratings")}
-              className={`px-6 py-3 font-medium transition-colors ${
-                activeTab === "ratings"
-                  ? "border-b-2 border-primary text-primary"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              Ratings
-            </button>
+            {!isAdmin && (
+              <button
+                onClick={() => setActiveTab("ratings")}
+                className={`px-6 py-3 font-medium transition-colors ${
+                  activeTab === "ratings"
+                    ? "border-b-2 border-primary text-primary"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                Ratings
+              </button>
+            )}
             {isAdmin && (
               <button
                 onClick={() => setActiveTab("admin")}
@@ -157,7 +167,7 @@ const Dashboard = () => {
       <main className="container mx-auto px-4 py-8">
         {activeTab === "submit" && !isAdmin && <SubmitProblemForm userId={user.id} />}
         {activeTab === "feed" && <ProblemFeed />}
-        {activeTab === "ratings" && (
+        {activeTab === "ratings" && !isAdmin && (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <InstitutionRating userId={user.id} />
             <RatingAnalytics />

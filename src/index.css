@@ -45,6 +45,9 @@ All colors MUST be HSL.
     --shadow-elegant: 0 10px 30px -10px hsl(265 60% 65% / 0.3);
     --shadow-soft: 0 4px 12px -2px hsl(265 30% 70% / 0.2);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Rating stars golden yellow */
+    --rating-star: 45 100% 51%;
   }
 }
 
