@@ -83,25 +83,28 @@ const Dashboard = () => {
 
   return (
     <div className="min-h-screen bg-gradient-subtle">
-      <header className="bg-card border-b shadow-soft">
-        <div className="container mx-auto px-4 py-4">
+      <header className="bg-card border-b shadow-glow backdrop-blur-sm">
+        <div className="container mx-auto px-4 py-5">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-4">
               <img 
                 src={brototypeLogo} 
                 alt="Brototype" 
-                className="h-12 w-12 object-cover rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                className="h-14 w-14 object-cover rounded-xl shadow-elegant hover:shadow-glow transition-all hover:scale-105"
               />
-              <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                Brototype
-              </h1>
+              <div>
+                <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+                  Brototype
+                </h1>
+                <p className="text-xs text-muted-foreground">Student Support Portal</p>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               {!isAdmin && <NotificationBell userId={user.id} />}
               <Button
                 variant="outline"
                 onClick={handleSignOut}
-                className="rounded-xl"
+                className="rounded-xl hover:bg-secondary transition-colors"
               >
                 <LogOut className="mr-2 h-4 w-4" />
                 Sign Out

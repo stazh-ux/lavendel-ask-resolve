@@ -4,9 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { problemService } from "@/lib/supabase";
+import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { formatDistanceToNow } from "date-fns";
-import { FileText, Send } from "lucide-react";
+import { FileText, Send, Download } from "lucide-react";
 
 interface Problem {
   id: string;
@@ -71,6 +72,15 @@ const AdminDashboard = () => {
     setSubmitting({ ...submitting, [problemId]: false });
   };
 
+  const handleDownloadAttachment = (filePath: string, fileName: string) => {
+    const { data } = supabase.storage
+      .from('problem-attachments')
+      .getPublicUrl(filePath);
+    
+    // Open in new tab for download
+    window.open(data.publicUrl, '_blank');
+  };
+
   if (loading) {
     return (
       <div className="text-center py-12">
@@ -81,11 +91,14 @@ const AdminDashboard = () => {
   }
 
   return (
-    <div className="max-w-4xl mx-auto space-y-4">
-      <h2 className="text-2xl font-bold mb-6">Admin Panel</h2>
+    <div className="max-w-4xl mx-auto space-y-6">
+      <div className="mb-8">
+        <h2 className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">Admin Panel</h2>
+        <p className="text-muted-foreground mt-2">Manage and respond to student problems</p>
+      </div>
 
       {problems.map((problem) => (
-        <Card key={problem.id} className="shadow-soft">
+        <Card key={problem.id} className="shadow-glow hover-lift border-2 border-border/50 bg-gradient-card">
           <CardHeader>
             <div className="flex items-start justify-between">
               <div className="flex-1">
@@ -110,10 +123,16 @@ const AdminDashboard = () => {
                 <h4 className="font-semibold mb-2">Attachments:</h4>
                 <div className="flex flex-wrap gap-2">
                   {problem.problem_attachments.map((attachment, index) => (
-                    <Badge key={index} variant="outline">
-                      <FileText className="h-3 w-3 mr-1" />
+                    <Button
+                      key={index}
+                      variant="outline"
+                      size="sm"
+                      onClick={() => handleDownloadAttachment(attachment.file_path, attachment.file_name)}
+                      className="rounded-xl hover:bg-accent hover:text-accent-foreground transition-colors"
+                    >
+                      <Download className="h-3 w-3 mr-2" />
                       {attachment.file_name}
-                    </Badge>
+                    </Button>
                   ))}
                 </div>
               </div>
@@ -132,11 +151,11 @@ const AdminDashboard = () => {
               />
             </div>
 
-            <div className="flex gap-2">
+            <div className="flex gap-3">
               <Button
                 onClick={() => handleRespond(problem.id, "resolved")}
                 disabled={submitting[problem.id] || !responses[problem.id]?.trim()}
-                className="bg-gradient-primary hover:opacity-90 rounded-xl"
+                className="bg-gradient-primary hover:shadow-glow rounded-xl transition-all"
               >
                 <Send className="mr-2 h-4 w-4" />
                 {problem.status === "resolved" ? "Update & Keep Resolved" : "Respond & Resolve"}
@@ -146,7 +165,7 @@ const AdminDashboard = () => {
                   onClick={() => handleRespond(problem.id, "pending")}
                   disabled={submitting[problem.id]}
                   variant="outline"
-                  className="rounded-xl"
+                  className="rounded-xl hover:bg-secondary"
                 >
                   Mark as Pending
                 </Button>
