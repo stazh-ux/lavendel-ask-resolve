@@ -93,7 +93,7 @@ const AdminDashboard = () => {
   return (
     <div className="max-w-4xl mx-auto space-y-6">
       <div className="mb-8">
-        <h2 className="text-3xl font-bold text-foreground">Admin Panel</h2>
+        <h2 className="text-3xl font-bold text-lavender">Admin Panel</h2>
         <p className="text-muted-foreground mt-2">Manage and respond to student problems</p>
       </div>
 

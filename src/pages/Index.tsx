@@ -37,7 +37,7 @@ const Index = () => {
               className="h-12 w-12 object-cover rounded-xl shadow-md hover:shadow-lg transition-all"
             />
             <div>
-              <h1 className="text-xl font-bold text-foreground">
+              <h1 className="text-xl font-bold text-lavender">
                 Brototype
               </h1>
               <p className="text-xs text-muted-foreground">Student Support Portal</p>
@@ -55,7 +55,7 @@ const Index = () => {
 
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto text-center mb-16 space-y-6">
-          <h2 className="text-5xl font-bold mb-4 leading-tight text-foreground">
+          <h2 className="text-5xl font-bold mb-4 leading-tight text-lavender">
             Student Support Platform
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
@@ -77,7 +77,7 @@ const Index = () => {
             <div className="bg-primary w-14 h-14 rounded-xl flex items-center justify-center mb-5">
               <MessageCircle className="h-7 w-7 text-primary-foreground" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-foreground">Submit Problems</h3>
+            <h3 className="text-xl font-bold mb-3 text-lavender">Submit Problems</h3>
             <p className="text-muted-foreground">
               Share your challenges and questions with our support team. Include attachments for better clarity.
             </p>
@@ -87,7 +87,7 @@ const Index = () => {
             <div className="bg-primary w-14 h-14 rounded-xl flex items-center justify-center mb-5">
               <Shield className="h-7 w-7 text-primary-foreground" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-foreground">Expert Responses</h3>
+            <h3 className="text-xl font-bold mb-3 text-lavender">Expert Responses</h3>
             <p className="text-muted-foreground">
               Get detailed responses from our admin team. All answers are public to help the entire community.
             </p>
@@ -97,7 +97,7 @@ const Index = () => {
             <div className="bg-primary w-14 h-14 rounded-xl flex items-center justify-center mb-5">
               <Users className="h-7 w-7 text-primary-foreground" />
             </div>
-            <h3 className="text-xl font-bold mb-3 text-foreground">Learn Together</h3>
+            <h3 className="text-xl font-bold mb-3 text-lavender">Learn Together</h3>
             <p className="text-muted-foreground">
               Browse all problems and solutions. Learn from others' questions and contribute to the knowledge base.
             </p>

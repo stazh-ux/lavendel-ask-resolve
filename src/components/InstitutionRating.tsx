@@ -61,7 +61,7 @@ export const InstitutionRating = ({ userId }: InstitutionRatingProps) => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Rate Brototype</CardTitle>
+        <CardTitle className="text-lavender">Rate Brototype</CardTitle>
         <CardDescription>
           Share your experience with the institution
         </CardDescription>
@@ -91,6 +91,14 @@ export const InstitutionRating = ({ userId }: InstitutionRatingProps) => {
           className="w-full"
         >
           {isSubmitting ? "Submitting..." : existingRating ? "Update Rating" : "Submit Rating"}
+        </Button>
+
+        <Button
+          variant="outline"
+          onClick={() => window.open('https://learn.brototype.com/', '_blank')}
+          className="w-full"
+        >
+          Visit Brototype Website
         </Button>
       </CardContent>
     </Card>

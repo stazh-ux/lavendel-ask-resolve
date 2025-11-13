@@ -53,7 +53,7 @@ export const RatingAnalytics = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">
+        <CardTitle className="flex items-center gap-2 text-lavender">
           <Star className="w-5 h-5 fill-[#F5E6D3] text-[#F5E6D3]" />
           Rating Analytics
         </CardTitle>

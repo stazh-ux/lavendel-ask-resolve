@@ -93,7 +93,7 @@ const Dashboard = () => {
                 className="h-12 w-12 object-cover rounded-xl shadow-md hover:shadow-lg transition-all"
               />
               <div>
-                <h1 className="text-xl font-bold text-foreground">
+                <h1 className="text-xl font-bold text-lavender">
                   Brototype
                 </h1>
                 <p className="text-xs text-muted-foreground">Student Support Portal</p>

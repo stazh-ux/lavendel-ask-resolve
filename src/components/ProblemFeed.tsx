@@ -56,7 +56,7 @@ const ProblemFeed = () => {
   return (
     <div className="max-w-4xl mx-auto space-y-6">
       <div className="mb-8">
-        <h2 className="text-3xl font-bold text-foreground">All Problems</h2>
+        <h2 className="text-3xl font-bold text-lavender">All Problems</h2>
         <p className="text-muted-foreground mt-2">Browse student questions and admin responses</p>
       </div>
       

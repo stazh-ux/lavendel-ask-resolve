@@ -79,7 +79,7 @@ const SubmitProblemForm = ({ userId }: SubmitProblemFormProps) => {
   return (
     <Card className="max-w-2xl mx-auto shadow-elegant">
       <CardHeader>
-        <CardTitle className="text-2xl">Submit a Problem</CardTitle>
+        <CardTitle className="text-2xl text-lavender">Submit a Problem</CardTitle>
         <CardDescription>
           Describe your issue and our admin team will respond publicly
         </CardDescription>

@@ -48,6 +48,7 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         'rating-star': "hsl(var(--rating-star))",
+        'lavender': "hsl(var(--lavender))",
       },
       borderRadius: {
         lg: "var(--radius)",
