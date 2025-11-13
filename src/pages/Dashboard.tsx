@@ -68,7 +68,7 @@ const Dashboard = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-subtle">
+      <div className="min-h-screen flex items-center justify-center bg-background">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto"></div>
           <p className="mt-4 text-muted-foreground">Loading...</p>
@@ -82,18 +82,18 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-subtle">
-      <header className="bg-card border-b shadow-glow backdrop-blur-sm">
+    <div className="min-h-screen bg-background">
+      <header className="bg-card border-b shadow-sm">
         <div className="container mx-auto px-4 py-5">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               <img 
                 src={brototypeLogo} 
                 alt="Brototype" 
-                className="h-14 w-14 object-cover rounded-xl shadow-elegant hover:shadow-glow transition-all hover:scale-105"
+                className="h-12 w-12 object-cover rounded-xl shadow-md hover:shadow-lg transition-all"
               />
               <div>
-                <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+                <h1 className="text-xl font-bold text-foreground">
                   Brototype
                 </h1>
                 <p className="text-xs text-muted-foreground">Student Support Portal</p>
@@ -104,7 +104,7 @@ const Dashboard = () => {
               <Button
                 variant="outline"
                 onClick={handleSignOut}
-                className="rounded-xl hover:bg-secondary transition-colors"
+                className="rounded-lg"
               >
                 <LogOut className="mr-2 h-4 w-4" />
                 Sign Out

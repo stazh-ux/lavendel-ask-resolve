@@ -56,12 +56,12 @@ const ProblemFeed = () => {
   return (
     <div className="max-w-4xl mx-auto space-y-6">
       <div className="mb-8">
-        <h2 className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">All Problems</h2>
+        <h2 className="text-3xl font-bold text-foreground">All Problems</h2>
         <p className="text-muted-foreground mt-2">Browse student questions and admin responses</p>
       </div>
       
       {problems.map((problem) => (
-        <Card key={problem.id} className="shadow-glow hover-lift transition-all border-2 border-border/50 bg-gradient-card">
+        <Card key={problem.id} className="shadow-md hover:shadow-lg transition-all border">
           <CardHeader>
             <div className="flex items-start justify-between">
               <div className="flex-1">
@@ -105,12 +105,12 @@ const ProblemFeed = () => {
             )}
 
             {problem.admin_response && (
-              <div className="bg-gradient-primary/10 rounded-2xl p-6 border-l-4 border-accent shadow-soft">
-                <h4 className="font-bold mb-3 text-primary flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5" />
+              <div className="bg-secondary p-4 rounded-lg mt-4 border">
+                <h4 className="font-semibold mb-2 flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-primary" />
                   Admin Response:
                 </h4>
-                <p className="text-foreground whitespace-pre-wrap leading-relaxed">{problem.admin_response}</p>
+                <p className="text-muted-foreground whitespace-pre-wrap">{problem.admin_response}</p>
               </div>
             )}
           </CardContent>

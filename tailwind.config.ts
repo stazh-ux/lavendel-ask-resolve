@@ -49,17 +49,6 @@ export default {
         },
         'rating-star': "hsl(var(--rating-star))",
       },
-      backgroundImage: {
-        'gradient-primary': 'var(--gradient-primary)',
-        'gradient-hero': 'var(--gradient-hero)',
-        'gradient-subtle': 'var(--gradient-subtle)',
-        'gradient-card': 'var(--gradient-card)',
-      },
-      boxShadow: {
-        'elegant': 'var(--shadow-elegant)',
-        'glow': 'var(--shadow-glow)',
-        'soft': 'var(--shadow-soft)',
-      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

@@ -20,24 +20,24 @@ const Index = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-subtle">
+      <div className="min-h-screen flex items-center justify-center bg-background">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-subtle">
-      <header className="container mx-auto px-4 py-8">
+    <div className="min-h-screen bg-background">
+      <header className="container mx-auto px-4 py-6">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <img 
               src={brototypeLogo} 
               alt="Brototype" 
-              className="h-14 w-14 object-cover rounded-xl shadow-elegant hover:shadow-glow transition-all hover:scale-105"
+              className="h-12 w-12 object-cover rounded-xl shadow-md hover:shadow-lg transition-all"
             />
             <div>
-              <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              <h1 className="text-xl font-bold text-foreground">
                 Brototype
               </h1>
               <p className="text-xs text-muted-foreground">Student Support Portal</p>
@@ -45,7 +45,7 @@ const Index = () => {
           </div>
           <Button
             onClick={() => navigate("/auth")}
-            className="bg-gradient-primary hover:shadow-glow rounded-xl transition-all"
+            className="rounded-lg"
           >
             Get Started
             <ArrowRight className="ml-2 h-4 w-4" />
@@ -53,52 +53,52 @@ const Index = () => {
         </div>
       </header>
 
-      <main className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center mb-20 space-y-8">
-          <h2 className="text-6xl font-bold mb-6 leading-tight bg-gradient-hero bg-clip-text text-transparent">
+      <main className="container mx-auto px-4 py-16">
+        <div className="max-w-3xl mx-auto text-center mb-16 space-y-6">
+          <h2 className="text-5xl font-bold mb-4 leading-tight text-foreground">
             Student Support Platform
           </h2>
-          <p className="text-2xl text-muted-foreground mb-10 leading-relaxed">
+          <p className="text-xl text-muted-foreground mb-8">
             Submit your problems, get expert responses, and learn from the community.
             Your questions help everyone grow.
           </p>
           <Button
             size="lg"
             onClick={() => navigate("/auth")}
-            className="bg-gradient-primary hover:shadow-glow rounded-2xl text-lg px-12 py-7 shadow-elegant transition-all hover:scale-105"
+            className="rounded-lg text-lg px-8 py-6"
           >
             Join Now
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-          <div className="bg-gradient-card p-10 rounded-3xl shadow-glow hover-lift border-2 border-border/50 transition-all">
-            <div className="bg-gradient-primary w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-elegant">
-              <MessageCircle className="h-8 w-8 text-white" />
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="bg-card p-8 rounded-2xl shadow-md hover:shadow-lg border border-border transition-all">
+            <div className="bg-primary w-14 h-14 rounded-xl flex items-center justify-center mb-5">
+              <MessageCircle className="h-7 w-7 text-primary-foreground" />
             </div>
-            <h3 className="text-2xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">Submit Problems</h3>
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <h3 className="text-xl font-bold mb-3 text-foreground">Submit Problems</h3>
+            <p className="text-muted-foreground">
               Share your challenges and questions with our support team. Include attachments for better clarity.
             </p>
           </div>
 
-          <div className="bg-gradient-card p-10 rounded-3xl shadow-glow hover-lift border-2 border-border/50 transition-all">
-            <div className="bg-gradient-primary w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-elegant">
-              <Shield className="h-8 w-8 text-white" />
+          <div className="bg-card p-8 rounded-2xl shadow-md hover:shadow-lg border border-border transition-all">
+            <div className="bg-primary w-14 h-14 rounded-xl flex items-center justify-center mb-5">
+              <Shield className="h-7 w-7 text-primary-foreground" />
             </div>
-            <h3 className="text-2xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">Expert Responses</h3>
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <h3 className="text-xl font-bold mb-3 text-foreground">Expert Responses</h3>
+            <p className="text-muted-foreground">
               Get detailed responses from our admin team. All answers are public to help the entire community.
             </p>
           </div>
 
-          <div className="bg-gradient-card p-10 rounded-3xl shadow-glow hover-lift border-2 border-border/50 transition-all">
-            <div className="bg-gradient-primary w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-elegant">
-              <Users className="h-8 w-8 text-white" />
+          <div className="bg-card p-8 rounded-2xl shadow-md hover:shadow-lg border border-border transition-all">
+            <div className="bg-primary w-14 h-14 rounded-xl flex items-center justify-center mb-5">
+              <Users className="h-7 w-7 text-primary-foreground" />
             </div>
-            <h3 className="text-2xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">Learn Together</h3>
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <h3 className="text-xl font-bold mb-3 text-foreground">Learn Together</h3>
+            <p className="text-muted-foreground">
               Browse all problems and solutions. Learn from others' questions and contribute to the knowledge base.
             </p>
           </div>

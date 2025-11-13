@@ -93,12 +93,12 @@ const AdminDashboard = () => {
   return (
     <div className="max-w-4xl mx-auto space-y-6">
       <div className="mb-8">
-        <h2 className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">Admin Panel</h2>
+        <h2 className="text-3xl font-bold text-foreground">Admin Panel</h2>
         <p className="text-muted-foreground mt-2">Manage and respond to student problems</p>
       </div>
 
       {problems.map((problem) => (
-        <Card key={problem.id} className="shadow-glow hover-lift border-2 border-border/50 bg-gradient-card">
+        <Card key={problem.id} className="shadow-md border">
           <CardHeader>
             <div className="flex items-start justify-between">
               <div className="flex-1">
@@ -128,7 +128,7 @@ const AdminDashboard = () => {
                       variant="outline"
                       size="sm"
                       onClick={() => handleDownloadAttachment(attachment.file_path, attachment.file_name)}
-                      className="rounded-xl hover:bg-accent hover:text-accent-foreground transition-colors"
+                      className="rounded-lg"
                     >
                       <Download className="h-3 w-3 mr-2" />
                       {attachment.file_name}
@@ -147,7 +147,7 @@ const AdminDashboard = () => {
                 }
                 placeholder="Write your response here..."
                 rows={4}
-                className="rounded-xl resize-none"
+                className="rounded-lg resize-none"
               />
             </div>
 
@@ -155,7 +155,7 @@ const AdminDashboard = () => {
               <Button
                 onClick={() => handleRespond(problem.id, "resolved")}
                 disabled={submitting[problem.id] || !responses[problem.id]?.trim()}
-                className="bg-gradient-primary hover:shadow-glow rounded-xl transition-all"
+                className="rounded-lg"
               >
                 <Send className="mr-2 h-4 w-4" />
                 {problem.status === "resolved" ? "Update & Keep Resolved" : "Respond & Resolve"}
@@ -165,7 +165,7 @@ const AdminDashboard = () => {
                   onClick={() => handleRespond(problem.id, "pending")}
                   disabled={submitting[problem.id]}
                   variant="outline"
-                  className="rounded-xl hover:bg-secondary"
+                  className="rounded-lg"
                 >
                   Mark as Pending
                 </Button>
