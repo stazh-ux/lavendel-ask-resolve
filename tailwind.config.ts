@@ -49,6 +49,7 @@ export default {
         },
         'rating-star': "hsl(var(--rating-star))",
         'lavender': "hsl(var(--lavender))",
+        'off-white': "hsl(var(--off-white))",
       },
       borderRadius: {
         lg: "var(--radius)",
