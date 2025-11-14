@@ -149,7 +149,7 @@ const Auth = () => {
           </TabsList>
 
           <TabsContent value="signin">
-            <Card className="shadow-elegant">
+            <Card className="shadow-elegant bg-off-white">
               <form onSubmit={handleSignIn}>
                 <CardHeader>
                   <CardTitle>Welcome Back</CardTitle>
@@ -195,7 +195,7 @@ const Auth = () => {
           </TabsContent>
 
           <TabsContent value="signup">
-            <Card className="shadow-elegant">
+            <Card className="shadow-elegant bg-off-white">
               <form onSubmit={handleSignUp}>
                 <CardHeader>
                   <CardTitle>Create Account</CardTitle>
