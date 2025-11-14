@@ -184,7 +184,7 @@ const Auth = () => {
                 <CardFooter>
                   <Button
                     type="submit"
-                    className="w-full bg-gradient-primary hover:opacity-90 rounded-xl"
+                    className="w-full bg-dark-lavender hover:bg-dark-lavender/90 text-white rounded-xl"
                     disabled={loading}
                   >
                     {loading ? "Signing in..." : "Sign In"}
@@ -266,7 +266,7 @@ const Auth = () => {
                 <CardFooter>
                   <Button
                     type="submit"
-                    className="w-full bg-gradient-primary hover:opacity-90 rounded-xl"
+                    className="w-full bg-dark-lavender hover:bg-dark-lavender/90 text-white rounded-xl"
                     disabled={loading}
                   >
                     {loading ? "Creating account..." : "Sign Up"}
