@@ -40,6 +40,7 @@ All colors MUST be HSL.
 
     /* Custom colors */
     --lavender: 260 60% 70%;
+    --dark-lavender: 260 60% 50%;
     --rating-star: 45 100% 51%;
     --off-white: 40 20% 97%;
   }
